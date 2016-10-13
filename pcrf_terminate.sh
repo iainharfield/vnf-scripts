@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "*******************************************"
-echo "Start.... $IAIN"
+echo "Terminate.... $IAIN"
 echo " networkName: $networkName"
 echo " hostname:    $hostname"
 echo " private_floatingIp: $private_floatingIp "

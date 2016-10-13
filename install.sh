@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 echo "*******************************************"
-echo "Install.... $IAIN"
+echo "Initiate.... $IAIN"
 echo " networkName: $networkName"
 echo " hostname:    $hostname"
 echo " private_floatingIp: $private_floatingIp "
