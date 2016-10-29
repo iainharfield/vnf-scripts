@@ -8,3 +8,4 @@ echo " private_floatingIp: $private_floatingIp "
 echo "*******************************************"
 
 sudo apt-get update && sudo apt-get install -y iperf screen
+sudo apt-get install -y stress
