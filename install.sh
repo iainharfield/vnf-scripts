@@ -10,5 +10,5 @@ echo "*******************************************"
 sudo apt-get update && sudo apt-get install -y iperf screen
 sudo apt-get install -y stress
 
-cp stresstest ~/
-chmod +x stresstest
+sudo cp stresstest ~/
+sudo chmod +x stresstest
