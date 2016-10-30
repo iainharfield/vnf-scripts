@@ -7,3 +7,6 @@ echo " private_floatingIp: $private_floatingIp "
 echo "*******************************************"
 
 echo 'server_private2='$server_private2 > /home/ubuntu/info
+
+cp /opt/openbaton/scripts/stresstest.sh ~/
+chmod +x ~/stresstest.sh
