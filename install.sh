@@ -13,6 +13,7 @@ sudo apt-get install -y stress
 
 # Configure /etc/hosts - relises on the script being downloaded, could there be a race condition here? 
 sudo ./etchosts.sh add $hostname
+sudo ./etchosts.sh add $hostname $private_floatingIp
 
 git clone https://github.com/iainharfield/sb-vnf.git
 
