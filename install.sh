@@ -10,3 +10,8 @@ echo "*******************************************"
 sudo apt-get update && sudo apt-get install -y iperf screen
 sudo apt-get install -y stress
 
+
+# Configure /etc/hosts
+sudo ./etchosts.sh add $hostname
+
+
