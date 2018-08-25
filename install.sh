@@ -17,3 +17,6 @@ sudo ./etchosts.sh add $hostname $private_floatingIp
 
 git clone https://github.com/iainharfield/sb-vnf.git
 
+cp ./sb-vnf/vnfUtil.sh .
+sudo chmod +x vnfUtil.sh
+
