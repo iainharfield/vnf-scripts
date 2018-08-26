@@ -16,7 +16,7 @@ sudo ./etchosts.sh add $hostname
 sudo ./etchosts.sh add $hostname $private_floatingIp
 
 # Get the demo Streambase build
-git clone https://github.com/iainharfield/sb-vnf.git
+git clone https:/github.com/iainharfield/sb-vnf.git
 
 cp ./sb-vnf/vnfUtil.sh .
 sudo chmod +x vnfUtil.sh
