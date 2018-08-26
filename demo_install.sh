@@ -24,6 +24,9 @@ sudo --user=ubuntu git clone https://github.com/iainharfield/sb-vnf.git
 
 cp ./sb-vnf/vnfUtil.sh .
 sudo chmod +x vnfUtil.sh
+cp /opt/openbaton/scripts/stresstest.sh .
+sudo chmod +x stresstest.sh
+
 
 # install Streambase VNF Demo (running as root, environment is not right)
 sudo --user=ubuntu epadmin install node --application=./sb-vnf/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip   --nodename=A.ubuntu --nodedirectory=/home/ubuntu/tmp/Nodedirs 
