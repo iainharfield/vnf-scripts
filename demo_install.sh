@@ -15,7 +15,12 @@ sudo apt-get install -y stress
 sudo ./etchosts.sh add $hostname
 sudo ./etchosts.sh add $hostname $private_floatingIp
 
+# Get the demo Streambase build
 git clone https://github.com/iainharfield/sb-vnf.git
 
 cp ./sb-vnf/vnfUtil.sh .
 sudo chmod +x vnfUtil.sh
+
+# install Streambase VNF Demo
+epadmin install node   --application=./sb-vnf/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip   --nodename=A.ubuntu --nodedirectory=/home/ubuntu/tmp/Nodedirs 
+
