@@ -20,7 +20,7 @@ sudo apt-get install -y stress
 cd /home/ubuntu
 
 # Get the demo Streambase build
-git clone https://github.com/iainharfield/sb-vnf.git
+sudo --user=ubuntu git clone https://github.com/iainharfield/sb-vnf.git
 
 cp ./sb-vnf/vnfUtil.sh .
 sudo chmod +x vnfUtil.sh
