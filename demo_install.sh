@@ -26,5 +26,5 @@ cp ./sb-vnf/vnfUtil.sh .
 sudo chmod +x vnfUtil.sh
 
 # install Streambase VNF Demo (running as root, environment is not right)
-sudo --user=ubuntu install node   --application=./sb-vnf/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip   --nodename=A.ubuntu --nodedirectory=/home/ubuntu/tmp/Nodedirs 
+sudo --user=ubuntu install node --application=./sb-vnf/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip   --nodename=A.ubuntu --nodedirectory=/home/ubuntu/tmp/Nodedirs 
 
