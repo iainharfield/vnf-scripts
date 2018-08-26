@@ -12,7 +12,8 @@ sudo apt-get install -y stress
 
 
 # Configure /etc/hosts - relises on the script being downloaded, could there be a race condition here? 
-sudo ./etchosts.sh add $hostname
+# Throw away error messages on first call to prevent this script from stopping.
+sudo ./etchosts.sh add $hostname 2> /dev/null
 sudo ./etchosts.sh add $hostname $private_floatingIp
 
 # Get the demo Streambase build
