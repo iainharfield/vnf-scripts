@@ -7,14 +7,15 @@ echo " hostname:    $hostname"
 echo " private_floatingIp: $private_floatingIp "
 echo "*******************************************"
 
-sudo apt-get update && sudo apt-get install -y iperf screen
-sudo apt-get install -y stress
-
-
 # Configure /etc/hosts - relises on the script being downloaded, could there be a race condition here? 
 # Throw away error messages on first call to prevent this script from stopping.
 sudo ./etchosts.sh add $hostname 2> /dev/null
 sudo ./etchosts.sh add $hostname $private_floatingIp
+
+# install stress application
+# sudo apt-get update && sudo apt-get install -y iperf screen
+sudo apt-get install -y stress
+
 
 # Get the demo Streambase build
 git clone https:/github.com/iainharfield/sb-vnf.git
