@@ -9,8 +9,8 @@ echo "*******************************************"
 
 # Configure /etc/hosts - relises on the script being downloaded, could there be a race condition here? 
 # Throw away error messages on first call to prevent this script from stopping.
-sudo ./etchosts.sh add $hostname 2> /dev/null
-sudo ./etchosts.sh add $hostname $private_floatingIp
+sudo /opt/openbaton/scripts/etchosts.sh add $hostname 2> /dev/null
+sudo /opt/openbaton/scripts.sh add $hostname $private_floatingIp
 
 # install stress application
 # sudo apt-get update && sudo apt-get install -y iperf screen
