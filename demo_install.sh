@@ -20,7 +20,7 @@ sudo /opt/openbaton/scripts.sh add $hostname $private_floatingIp
 
 # install stress application
 # sudo apt-get update && sudo apt-get install -y iperf screen
-sudo apt-get install -y stress
+# sudo apt-get install -y stress
 
 # CD to the user home (this script runs as root when launched by openbaton)
 cd /home/ubuntu
