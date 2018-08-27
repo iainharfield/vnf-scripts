@@ -14,4 +14,4 @@ ls /opt/openbaton/scripts/
 
 # Start Streambase VNF Demo
 # epadmin install node   --application=./sb-vnf/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip   --nodename=A.ubuntu --nodedirectory=/home/ubuntu/tmp/Nodedirs 
-sudo --user=ubuntu epadmin servicename=A.ubuntu stop node
+epadmin servicename=A.ubuntu stop node
