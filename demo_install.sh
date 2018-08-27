@@ -11,7 +11,7 @@ env
 #This script when launched by OpenBaton runs as root.  Set up SB environment
 export STREAMBASE_HOME=/opt/tibco/sb-cep/10.3
 export JAVA_HOME=$STREAMBASE_HOME/jdk
-export TIBCO_EP_HOME=$STREAMBASE_HOME/10.3
+export TIBCO_EP_HOME=$STREAMBASE_HOME
 export PATH=/opt/tibco/sb-cep/10.3/jdk/bin:/opt/tibco/sb-cep/10.3/bin:/opt/tibco/sb-cep/10.3/distrib/tibco/bin:/opt/tibco/sb-cep/10.3/sdk/mvn/bin:$PATH
 env
 
