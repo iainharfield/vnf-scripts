@@ -7,13 +7,11 @@ echo " hostname:    $hostname"
 echo " private_floatingIp: $private_floatingIp "
 echo "*******************************************"
 
-env
 #This script when launched by OpenBaton runs as root.  Set up SB environment
 export STREAMBASE_HOME=/opt/tibco/sb-cep/10.3
 export JAVA_HOME=$STREAMBASE_HOME/jdk
 export TIBCO_EP_HOME=$STREAMBASE_HOME
 export PATH=/opt/tibco/sb-cep/10.3/jdk/bin:/opt/tibco/sb-cep/10.3/bin:/opt/tibco/sb-cep/10.3/distrib/tibco/bin:/opt/tibco/sb-cep/10.3/sdk/mvn/bin:$PATH
-env
 
 # Configure /etc/hosts - relises on the script being downloaded, could there be a race condition here? 
 # Throw away error messages on first call to prevent this script from stopping.
