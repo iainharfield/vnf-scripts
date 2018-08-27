@@ -12,7 +12,7 @@ env
 export STREAMBASE_HOME=/opt/tibco/sb-cep/10.3
 export JAVA_HOME=$STREAMBASE_HOME/jdk
 export TIBCO_EP_HOME=$STREAMBASE_HOME/10.3
-#PATH=/opt/tibco/sb-cep/10.3/jdk/bin:/opt/tibco/sb-cep/10.3/bin:/opt/tibco/sb-cep/10.3/distrib/tibco/bin:/opt/tibco/sb-cep/10.3/sdk/mvn/bin
+export PATH=/opt/tibco/sb-cep/10.3/jdk/bin:/opt/tibco/sb-cep/10.3/bin:/opt/tibco/sb-cep/10.3/distrib/tibco/bin:/opt/tibco/sb-cep/10.3/sdk/mvn/bin:$PATH
 env
 
 # Configure /etc/hosts - relises on the script being downloaded, could there be a race condition here? 
@@ -28,7 +28,8 @@ sudo apt-get install -y stress
 cd /home/ubuntu
 
 # Get the demo Streambase build
-sudo --user=ubuntu git clone https://github.com/iainharfield/sb-vnf.git
+#sudo --user=ubuntu git clone https://github.com/iainharfield/sb-vnf.git
+git clone https://github.com/iainharfield/sb-vnf.git
 
 cp ./sb-vnf/vnfUtil.sh .
 sudo chmod +x vnfUtil.sh
@@ -37,5 +38,6 @@ sudo chmod +x stresstest.sh
 
 
 # install Streambase VNF Demo (running as root, environment is not right)
-sudo --user=ubuntu epadmin install node --application=./sb-vnf/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip   --nodename=A.ubuntu --nodedirectory=/home/ubuntu/tmp/Nodedirs 
+#sudo --user=ubuntu epadmin install node --application=./sb-vnf/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip   --nodename=A.ubuntu --nodedirectory=/home/ubuntu/tmp/Nodedirs 
+epadmin install node --application=./sb-vnf/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip   --nodename=A.ubuntu --nodedirectory=/home/ubuntu/tmp/Nodedirs 
 
