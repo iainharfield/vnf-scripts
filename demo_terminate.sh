@@ -6,8 +6,6 @@ echo " hostname:    $hostname"
 echo " private_floatingIp: $private_floatingIp "
 echo "*******************************************"
 
-echo 'server_private2='$server_private2 > /home/ubuntu/info
-
 # stop Streambase VNF node
 epadmin servicename=A.ubuntu stop node
 
