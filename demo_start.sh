@@ -6,12 +6,10 @@ echo " hostname:    $hostname"
 echo " private_floatingIp: $private_floatingIp "
 echo "*******************************************"
 
+#Save floating point IP address for later
 echo 'private_floatingIp='$private_floatingIp > /home/ubuntu/info
 
-ls /opt/openbaton/scripts/
-
-
+# ls /opt/openbaton/scripts/
 
 # Start Streambase VNF Demo
-# epadmin install node   --application=./sb-vnf/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip   --nodename=A.ubuntu --nodedirectory=/home/ubuntu/tmp/Nodedirs 
 epadmin servicename=A.ubuntu start node
