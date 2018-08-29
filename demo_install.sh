@@ -23,7 +23,7 @@ sudo /opt/openbaton/scripts.sh add $hostname $private_floatingIp
 # CD to the user home (this script runs as root when launched by openbaton)
 cd /home/ubuntu
 
-# Get the demo Streambase build
+# Get the demo Streambase Application build
 git clone https://github.com/iainharfield/sb-vnf.git
 
 cp ./sb-vnf/vnfUtil.sh .
