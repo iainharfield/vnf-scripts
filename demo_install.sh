@@ -18,17 +18,17 @@ export JAVA_HOME=$STREAMBASE_HOME/jdk
 export TIBCO_EP_HOME=$STREAMBASE_HOME
 export PATH=/opt/tibco/sb-cep/10.3/jdk/bin:/opt/tibco/sb-cep/10.3/bin:/opt/tibco/sb-cep/10.3/distrib/tibco/bin:/opt/tibco/sb-cep/10.3/sdk/mvn/bin:$PATH
 
-APPLICATION=$(pwd)/sbVNFdemoApp/app/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip
-CLUSTER_NAME=$(hostname)
-NODE_DIR=$(pwd)/nfvnodes
-
-# Configure /etc/hosts - relises on the script being downloaded, could there be a race condition here? 
+# Configure /etc/hosts - relies on the script being downloaded, could there be a race condition here? 
 # Throw away error messages on first call to prevent this script from stopping unexpectedly.
 sudo /opt/openbaton/scripts/etchosts.sh add $hostname 2> /dev/null
 sudo /opt/openbaton/scripts.sh add $hostname $private_floatingIp
 
 # CD to the user home (this script runs as root when launched by openbaton)
 cd /home/ubuntu
+
+APPLICATION=$(pwd)/sbVNFdemoApp/app/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip
+CLUSTER_NAME=$(hostname)
+NODE_DIR=$(pwd)/nfvnodes
 
 # Get the demo Streambase Application build
 git clone https://github.com/iainharfield/sbVNFdemoApp.git
