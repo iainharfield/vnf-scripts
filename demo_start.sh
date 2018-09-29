@@ -1,9 +1,12 @@
 #!/bin/bash
 echo "*******************************************"
-echo " Start.... $IAIN"
-echo " networkName: $networkName"
-echo " hostname:    $hostname"
-echo " private_floatingIp: $private_floatingIp "
+echo "  Start....                               *"
+echo "* Description : $Description              *"
+echo "* mqttBroker = $mqttBroker                *"
+echo "* mqttPublishDelay = $mqttPublishDelay    *"
+echo "* networkName: $networkName"
+echo "* hostname:    $hostname"
+echo "* private_floatingIp: $private_floatingIp "
 echo "*******************************************"
 
 #Save floating point IP address for later
