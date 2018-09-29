@@ -1,9 +1,12 @@
 #!/bin/bash
 echo "*******************************************"
-echo "Terminate.... $IAIN"
-echo " networkName: $networkName"
-echo " hostname:    $hostname"
-echo " private_floatingIp: $private_floatingIp "
+echo "* Terminate....                           *"
+echo "* Description : $Description              *"
+echo "* mqttBroker = $mqttBroker                *"
+echo "* mqttPublishDelay = $mqttPublishDelay    *"
+echo "* networkName: $networkName"
+echo "* hostname:    $hostname"
+echo "* private_floatingIp: $private_floatingIp "
 echo "*******************************************"
 CLUSTER_NAME=$(hostname)
 
