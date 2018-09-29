@@ -4,12 +4,12 @@
 #
 echo "*******************************************"
 echo "* Instantiate....                         *"                         
-echo "* Description : $Description"
-echo "* mqttBroker = $mqttBroker
+echo "* Description : $Description              *"
+echo "* mqttBroker = $mqttBroker                *"
 ech0 "* mqttPublishDelay = $mqttPublishDelay    *"
-echo "* networkName: $networkName"
-echo "* hostname:    $hostname"
-echo "* private_floatingIp: $private_floatingIp "
+echo "* networkName: $networkName               *"
+echo "* hostname:    $hostname                  *"
+echo "* private_floatingIp: $private_floatingIp *"
 echo "*******************************************"
 
 #This script when launched by OpenBaton runs as root.  Set up SB environment
