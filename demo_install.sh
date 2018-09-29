@@ -3,13 +3,13 @@
 # The image expected to be built with stress application already installed
 #
 echo "*******************************************"
-echo "* Instantiate....                         *"                         
-echo "* Description : $Description              *"
-echo "* mqttBroker = $mqttBroker                *"
-echo "* mqttPublishDelay = $mqttPublishDelay    *"
-echo "* networkName: $networkName               *"
-echo "* hostname:    $hostname                  *"
-echo "* private_floatingIp: $private_floatingIp *"
+echo "* Instantiate...."                         
+echo "* Description : $Description"
+echo "* mqttBroker = $mqttBroker"
+echo "* mqttPublishDelay = $mqttPublishDelay"
+echo "* networkName: $networkName"
+echo "* hostname:    $hostname"
+echo "* private_floatingIp: $private_floatingIp"
 echo "*******************************************"
 
 #This script when launched by OpenBaton runs as root.  Set up SB environment
