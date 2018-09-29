@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "*******************************************"
-echo "* Terminate...."
+echo "* Stop...."
 echo "* Description : $Description              *"
 echo "* mqttBroker = $mqttBroker                *"
 echo "* mqttPublishDelay = $mqttPublishDelay    *"
