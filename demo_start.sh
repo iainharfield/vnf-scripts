@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "*******************************************"
-echo "Start.... $IAIN"
+echo " Start.... $IAIN"
 echo " networkName: $networkName"
 echo " hostname:    $hostname"
 echo " private_floatingIp: $private_floatingIp "
@@ -9,7 +9,7 @@ echo "*******************************************"
 #Save floating point IP address for later
 echo 'private_floatingIp='$private_floatingIp > /home/ubuntu/info
 
-# ls /opt/openbaton/scripts/
+CLUSTER_NAME=$(hostname)
 
 # Start Streambase VNF Demo
-epadmin servicename=A.ubuntu start node
+epadmin servicename=${CLUSTER_NAME} start node
