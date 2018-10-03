@@ -27,13 +27,13 @@ sudo /opt/openbaton/scripts.sh add $hostname $private_floatingIp
 # CD to the user home (this script runs as root when launched by openbaton)
 cd /home/ubuntu
 
-APPLICATION=$(pwd)/target/vnfDemo_Deploy-0.0.1-SNAPSHOT-ep-application.zip
+# Get the demo Streambase Application build
+git clone https://github.com/iainharfield/sbVNFdemoApp.git
+
+APPLICATION=$(pwd)/sbVNFdemoApp/app/vnfDemo_Deploy-0.0.1-SNAPSHOT-ep-application.zip
 CLUSTER_NAME=vnfdemo
 NODE_NAME=$(hostname)
 NODE_DIR=$(pwd)/vnfnodes
-
-# Get the demo Streambase Application build
-git clone https://github.com/iainharfield/sbVNFdemoApp.git
 
 cp ./sbVNFdemoApp/vnfUtil.sh .
 sudo chmod +x vnfUtil.sh
