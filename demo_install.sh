@@ -27,9 +27,10 @@ sudo /opt/openbaton/scripts.sh add $hostname $private_floatingIp
 # CD to the user home (this script runs as root when launched by openbaton)
 cd /home/ubuntu
 
-APPLICATION=$(pwd)/sbVNFdemoApp/app/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip
-CLUSTER_NAME=$(hostname)
-NODE_DIR=$(pwd)/nfvnodes
+APPLICATION=$(pwd)/target/vnfDemo_Deploy-0.0.1-SNAPSHOT-ep-application.zip
+CLUSTER_NAME=vnfdemo
+NODE_NAME=$(hostname)
+NODE_DIR=$(pwd)/vnfnodes
 
 # Get the demo Streambase Application build
 git clone https://github.com/iainharfield/sbVNFdemoApp.git
@@ -39,16 +40,11 @@ sudo chmod +x vnfUtil.sh
 cp /opt/openbaton/scripts/stresstest.sh .
 sudo chmod +x stresstest.sh
 
-# install Streambase VNF Demo (running as root, environment is not right)
-#epadmin install node --application=./sb-vnf/deploy_nfvDemo-0.0.1-SNAPSHOT-ep-application.zip  \
-#                     --nodename=A.ubuntu \ 
-#                     --nodedirectory=/home/ubuntu/tmp/Nodedirs 
-
 epadmin install node \
                 description="SB10-VNF" \
-		nodename=A.${CLUSTER_NAME} \
+		nodename=${NODE_NAME}.${CLUSTER_NAME} \
 		application=$APPLICATION \
 		nodedirectory=$NODE_DIR \
-		substitutions="NFVNODE=A.${CLUSTER_NAME},NODE_CLIENT_PORT=10000,METRONOME_INTERVAL=${mqttPublishDelay},MQTT_BROKER=${mqttBroker}" \
+		substitutions="VNFNODE=${CLUSTER_NAME}.NODE_CLIENT_PORT=10000,METRONOME_INTERVAL=${mqttPublishDelay},MQTT_BROKER=${mqttBroker}" \
 		nodedeploy=$(pwd)/sbVNFdemoApp/configurations/node.conf
 
