@@ -9,7 +9,7 @@ echo "* hostname:    $hostname"
 echo "* private_floatingIp: $private_floatingIp "
 echo "*******************************************"
 
-CLUSTER_NAME=$(hostname)
+CLUSTER_NAME=vnfdemo
 
 # stop Streambase VNF node
 epadmin servicename=${CLUSTER_NAME} stop node
