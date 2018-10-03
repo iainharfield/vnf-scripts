@@ -12,7 +12,7 @@ echo "*******************************************"
 #Save floating point IP address for later
 echo 'private_floatingIp='$private_floatingIp > /home/ubuntu/info
 
-CLUSTER_NAME=$(hostname)
+CLUSTER_NAME=vnfdemo
 
 # Start Streambase VNF Demo
 epadmin servicename=${CLUSTER_NAME} start node
