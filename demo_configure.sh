@@ -1,9 +1,13 @@
 #!/bin/bash
 echo "*******************************************"
-echo "Configure.... $IAIN"
-echo " networkName: $networkName"
-echo " hostname:    $hostname"
-echo " private_floatingIp: $private_floatingIp "
+echo "* Configure...."                         
+echo "* Description : $Description"
+echo "* mqttBroker = $mqttBroker"
+echo "* mqttPublishDelay = $mqttPublishDelay"
+echo "* mqttQueueName = $mqttQueueName"
+echo "* networkName: $networkName"
+echo "* hostname:    $hostname"
+echo "* private_floatingIp: $private_floatingIp"
 echo "*******************************************"
 export STREAMBASE_HOME=/opt/tibco/sb-cep/10.3
 export JAVA_HOME=$STREAMBASE_HOME/jdk
