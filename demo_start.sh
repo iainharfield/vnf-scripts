@@ -18,6 +18,7 @@ export PATH=/opt/tibco/sb-cep/10.3/jdk/bin:/opt/tibco/sb-cep/10.3/bin:/opt/tibco
 echo 'private_floatingIp='$private_floatingIp > /home/ubuntu/info
 
 CLUSTER_NAME=vnfdemo
+NODE_NAME=$(hostname)
 
 # Start Streambase VNF Demo
-epadmin servicename=${CLUSTER_NAME} start node
+epadmin servicename=${NODE_NAME}.${CLUSTER_NAME} start node
