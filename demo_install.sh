@@ -45,6 +45,7 @@ epadmin install node \
 		nodename=${NODE_NAME}.${CLUSTER_NAME} \
 		application=$APPLICATION \
 		nodedirectory=$NODE_DIR \
-		substitutions="VNFNODE=${NODE_NAME}.${CLUSTER_NAME},NODE_CLIENT_PORT=10000,METRONOME_INTERVAL=${mqttPublishDelay},MQTT_BROKER=${mqttBroker}" \
+		substitutions="VNFNODE=${NODE_NAME}.${CLUSTER_NAME},METRONOME_INTERVAL=${mqttPublishDelay},MQTT_BROKER=${mqttBroker}" \
 		nodedeploy=$(pwd)/sbVNFdemoApp/configurations/node.conf
 
+# 		substitutions="VNFNODE=${NODE_NAME}.${CLUSTER_NAME},NODE_CLIENT_PORT=10000,METRONOME_INTERVAL=${mqttPublishDelay},MQTT_BROKER=${mqttBroker}" \
