@@ -12,10 +12,12 @@ export STREAMBASE_HOME=/opt/tibco/sb-cep/10.3
 export JAVA_HOME=$STREAMBASE_HOME/jdk
 export TIBCO_EP_HOME=$STREAMBASE_HOME
 export PATH=/opt/tibco/sb-cep/10.3/jdk/bin:/opt/tibco/sb-cep/10.3/bin:/opt/tibco/sb-cep/10.3/distrib/tibco/bin:/opt/tibco/sb-cep/10.3/sdk/mvn/bin:$PATH
+
 CLUSTER_NAME=vnfdemo
+NODE_NAME=$(hostname)
 
 # stop Streambase VNF node
-epadmin servicename=${CLUSTER_NAME} stop node
+epadmin servicename=${NODE_NAME}.${CLUSTER_NAME} stop node
 
 # remove the node
-epadmin servicename=${CLUSTER_NAME} remove node
+epadmin servicename=${NODE_NAME}.${CLUSTER_NAME} remove node
