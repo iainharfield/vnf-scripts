@@ -29,6 +29,7 @@ cd /home/ubuntu
 
 # Get the demo Streambase Application build
 # Remove the directory becuse if you restart the VNFC the git clone fails
+rm -rf /opt/openbaton/scripts/.git
 rm -rf sbVNFdemoApp
 git clone https://github.com/iainharfield/sbVNFdemoApp.git
 
