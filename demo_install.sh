@@ -28,6 +28,8 @@ sudo /opt/openbaton/scripts.sh add $hostname $private_floatingIp
 cd /home/ubuntu
 
 # Get the demo Streambase Application build
+# Remove the directory becuse if you restart the VNFC the git clone fails
+rm -rf sbVNFdemoApp
 git clone https://github.com/iainharfield/sbVNFdemoApp.git
 
 APPLICATION=$(pwd)/sbVNFdemoApp/app/vnfDemo_Deploy-0.0.1-SNAPSHOT-ep-application.zip
